@@ -1,0 +1,83 @@
+name: LumiaExpressions
+main: me.xflakesid.flakesxpressions.LumiaExpressions
+version: 1.0b
+Description: LumiaExpressions is a basic plugin that a few plugins to order in your server.
+authors: ["xFlakesID", "http://lumiacraft.com"]
+commands:
+    hug:
+        description: Hug with someone!
+        permission: lumia.express.low
+        permission-message: You don't have permission to Hug someone!
+    cuddle:
+        description: Cuddle with someone!
+        permission: lumia.express.low
+        permission-message: You don't have permission to Cuddle someone!
+    love:
+        description: Love someone!
+        permission: lumia.express.low
+        permission-message: You don't have permission to Love someone!
+    kiss:
+        description: Kiss someone!
+        permission: lumia.express.low
+        permission-message: You don't have permission to Kiss someone!
+    welcome:
+        description: Welcome someone new!
+        permission: lumia.express.low
+        permission-message: You don't have permission to Welcome someone!
+    lumiacreated:
+        description: Who created this plugin.
+        permission: lumia.express.low
+        permission-message: You dont have permission to see who created this plugin! 
+    lumiahelp:
+        description: See what commands withhold this plugin.
+        permission: lumia.express.low
+        permission-message: You don't have permission to see what command I have..!
+    highfive:
+        description: Highfive with someone
+        permission: lumia.express.mid
+        permission-message: You don't have permission to Highfive with someone!
+    flip:
+        description: Flip someone!
+        permission: lumia.express.mid
+        permission-message: You don't have permission to Flip someone!
+    stahp:
+        description: Stahp someone!
+        permission: lumia.express.mid
+        permission-message: You don't have permission to Stahp someone!
+    murder:
+        description: Murder someone!
+        permission: lumia.express.high
+        permission-message: You don't have permission to Murder someone!
+    snap:
+        description: Snap at someone!
+        permission: lumia.express.high
+        permission-message: You don't have permission to Snap at someone!
+    slap:
+        description: Slap someone!
+        permission: lumia.express.high
+        permission-message: You don't have permission to Slap someone!
+    bitchslap:
+        description: Bitchslap someone!
+        permission: lumia.express.high
+        permission-message: You don't have permission to Bitchslap someone!
+    yolo:
+        description: yolobatt the sucker!
+        permission: lumia.express.admin
+        permission-message: You don't have permission to YoloBatt a motherfucker someone!
+permissions:
+    lumia.express.low:
+        description: allows people to do low expression commands
+        children:
+            lumia.express.*: false
+    lumia.express.mid:
+        description: allows people to do mid expression commands
+        children:
+            lumia.express.*: false
+    lumia.express.high:
+        description: allows people to do high expression commands
+        children:
+            lumia.express.*: false
+    lumia.epxress.admin:
+        description: allows people to do admin shizzle
+        children:
+            lumia.chat.*: false
