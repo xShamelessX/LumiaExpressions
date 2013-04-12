@@ -1,7 +1,7 @@
 name: LumiaExpressions
 main: me.xflakesid.flakesxpressions.LumiaExpressions
-version: 1.0b
-Description: LumiaExpressions is a basic plugin that a few plugins to order in your server.
+version: 3.2b
+Description: LumiaExpressions is a basic plugin that adds Expressions and some other cool stuff.
 authors: ["xFlakesID", "http://lumiacraft.com"]
 commands:
     hug:
@@ -61,9 +61,17 @@ commands:
         permission: lumia.express.high
         permission-message: You don't have permission to Bitchslap someone!
     yolo:
-        description: yolobatt the sucker!
+        description: yolobatt someone!
         permission: lumia.express.admin
-        permission-message: You don't have permission to YoloBatt a motherfucker someone!
+        permission-message: You don't have permission to YoloBatt someone!
+    god:
+        description: Be like god!
+        permission: lumia.chat.god
+        permission-message: You don't have permission to be god!
+    devil:
+        description: Be like the devil!
+        permission: lumia.chat.devil
+        permission-message: You don't have permission to be the devil!
 permissions:
     lumia.express.low:
         description: allows people to do low expression commands
@@ -79,5 +87,13 @@ permissions:
             lumia.express.*: false
     lumia.epxress.admin:
         description: allows people to do admin shizzle
+        children:
+            lumia.chat.*: false
+    lumia.chat.god:
+        description: allows people to do god shizzle
+        children:
+            lumia.chat.*: false
+    lumia.chat.devil:
+        description: allows people to do devil shizzle
         children:
             lumia.chat.*: false

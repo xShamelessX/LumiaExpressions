@@ -219,6 +219,54 @@ public class LumiaExpressions extends JavaPlugin {
 		if (commandLabel.equalsIgnoreCase("lumiacreated")) {
 			player.sendMessage(ChatColor.RED + "LumiExpressions was created by: xFlakesID" + " @http://michaj.nl");
 		}
+		
+		if (cmd.getName().equalsIgnoreCase("god")) {
+			if (player.hasPermission("lumia.chat.god")) {
+				String defaultString = gray + "[" + gold + "GOD" + gray + "]" + gold;
+				for (int n = 0; n < args.length; n++) {
+					if (args[n].length() > 0) {
+						defaultString = defaultString + " " + args[n];
+					}
+				}
+				player.getServer().broadcastMessage(defaultString);
+			} else {
+				player.sendMessage(frMsg + red + " You do not have permissions to be a god..!");
+
+			}
+		}
+		if (cmd.getName().equalsIgnoreCase("devil")) {
+			if (player.hasPermission("lumia.chat.devil")) {
+				String defaultString = gray + "[" + darkRed + "Devil" + gray + "]" + darkRed;
+				for (int n = 0; n < args.length; n++) {
+					if (args[n].length() > 0) {
+						defaultString = defaultString + " " + args[n];
+					}
+				}
+				player.getServer().broadcastMessage(defaultString);
+			} else {
+				player.sendMessage(frMsg + red + " You do not have permissions to be the devil..!");
+
+			}
+		}
+		
+		if (cmd.getName().equalsIgnoreCase("yolo")){
+			if(player.hasPermission("lumia.express.admin")){
+				
+				if(args.length == 0){
+					player.sendMessage(ChatColor.RED +  "Please use /yolo <PlayerName>");
+				}
+				if(args.length == 1){
+				
+						Player targetPlayer = getServer().getPlayer(args[0]);
+						if(targetPlayer.isOnline()){ 
+						targetPlayer.kickPlayer(ChatColor.GREEN + "You just got hit by a Yolobatt");
+						player.getServer().broadcastMessage(player.getDisplayName()+ reset + " Hit the swag out of " + targetPlayer.getDisplayName()+ reset + " with a " + gold + " YOLOBATT");
+						}else{
+							sender.sendMessage(frMsg + " " + targetPlayer.getName() + red + " is offline");
+						}
+				}
+			}
+		}
 		return false;
 	}
 }
