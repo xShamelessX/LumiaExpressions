@@ -16,6 +16,7 @@ V1.0
 - Added Bitchslap
 - Added Slap
 - Added Highfive
+ 
 V1.1
 - Bugfixed
   COMMANDS
